@@ -1,0 +1,27 @@
+{
+  "name": "arjan-domains",
+  "version": "1.0.0",
+  "description": "Automate DNS record operations and transfers in your domain name registrar",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/arjan-tools/domains.git"
+  },
+  "keywords": [
+    "arjan",
+    "domains",
+    "dns",
+    "records",
+    "route53",
+    "godaddy"
+  ],
+  "author": "gabriel kardonski @gkpty",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arjan-tools/domains/issues"
+  },
+  "homepage": "https://github.com/arjan-tools/domains#readme"
+}
