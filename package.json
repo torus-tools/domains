@@ -1,7 +1,7 @@
 {
-  "name": "arjan-domains",
-  "version": "1.0.0",
-  "description": "Automate DNS record operations and transfers in your domain name registrar",
+  "name": "@torus-tools/domains",
+  "version": "0.0.1",
+  "description": "A standrad promise-based SDK for managing nameserver and DNS operations accorss multiple domain name registrars",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,8 +11,9 @@
     "url": "git+https://github.com/arjan-tools/domains.git"
   },
   "keywords": [
-    "arjan",
+    "torus",
     "domains",
+    "nameservers",
     "dns",
     "records",
     "route53",
