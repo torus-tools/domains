@@ -1,14 +1,23 @@
+const getNameservers = require('./lib/nameservers/get')
 const updateNameservers = require('./lib/nameservers/update')
-const deleteRecord = require('./lib/records/delete')
+//const deleteRecord = require('./lib/records/delete')
 
-//updateNameservers
-for(let n in updateNameservers) module.exports[n].updateNameservers = updateNameservers[n]
+/* for(let g in getNameservers){
+  if(!module.exports[g]) module.exports[g] = {}
+  module.exports[g].getNameservers = getNameservers[g]
+}
 
-//addRecord(recordName, recordType)
-//updateRecord(recordName, recordType)
+for(let u in updateNameservers){
+  if(!module.exports[u]) module.exports[u] = {}
+  module.exports[u].updateNameservers = updateNameservers[u]
+}
+ */
 
-//deleteRecord
-for(let d in deleteRecord) module.exports[a].deleteRecord = deleteRecord[a]
-
-//updateRecords
-//deleteRecords
+module.exports.aws = {
+  getNameservers: getNameservers.aws,
+  updateNameservers: updateNameservers.aws
+}
+module.exports.godaddy = {
+  getNameservers: getNameservers.godaddy,
+  updateNameservers: updateNameservers.godaddy
+}
