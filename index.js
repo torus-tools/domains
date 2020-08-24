@@ -1,5 +1,7 @@
 const getNameservers = require('./lib/nameservers/get')
 const updateNameservers = require('./lib/nameservers/update')
+const addRecord = require('./lib/records/add')
+const createRedirect = require('./lib/records/createRedirect')
 //const deleteRecord = require('./lib/records/delete')
 
 /* for(let g in getNameservers){
@@ -15,9 +17,12 @@ for(let u in updateNameservers){
 
 module.exports.aws = {
   getNameservers: getNameservers.aws,
-  updateNameservers: updateNameservers.aws
+  updateNameservers: updateNameservers.aws,
+  addRecords: addRecord.aws,
 }
 module.exports.godaddy = {
   getNameservers: getNameservers.godaddy,
-  updateNameservers: updateNameservers.godaddy
+  updateNameservers: updateNameservers.godaddy,
+  addRecords: addRecord.godaddy,
+  createRedirect: createRedirect.godaddy
 }

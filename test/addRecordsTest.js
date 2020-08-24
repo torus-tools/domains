@@ -1,4 +1,4 @@
-const upsertRecords = require('../lib/records/upsert')
+const addRecords = require('../lib/records/add')
 
 const records = [
   {
@@ -9,6 +9,6 @@ const records = [
   }
 ]
 
-upsertRecords.godaddy('localizehtml.com', records)
+addRecords.godaddy('localizehtml.com', records)
 .then(res => console.log('DATA ', res))
 .catch(err=> console.log('ERROR ', err.response.data))
