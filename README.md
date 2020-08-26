@@ -32,3 +32,30 @@ the records parameter has the following format
  - SPF
  - SRV
  - TXT
+
+ # API
+ The API standardizes operations accross different providers. As shown in the examnple bellow, all of the methods must be used in the format `[PROVIDER].method`
+
+ ```
+ const {godaddy} = require('@torus-tools/domains')
+
+godaddy.getNameservers('mydomain.com')
+.then(data=> console.log(data))
+.catch(err=>console.log(err))
+ ```
+
+ ## Nameservers
+ **getNameservers(domain)**
+ - description: gets the nameservers for a particular domain
+ - params: (domain)
+  - domain: STRING: the root domain of your site i.e. yoursite.com
+- returns: promise(resolve, reject)
+  - resolve: (nameservers)
+    - nameservers: an array of nameserver addresses
+  - reject: (error) 
+
+ ## Records
+
+ ## Redirects
+
+ ## zones
