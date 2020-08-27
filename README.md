@@ -36,26 +36,47 @@ the records parameter has the following format
  # API
  The API standardizes operations accross different providers. As shown in the examnple bellow, all of the methods must be used in the format `[PROVIDER].method`
 
- ```
- const {godaddy} = require('@torus-tools/domains')
+```
+const {godaddy} = require('@torus-tools/domains')
 
 godaddy.getNameservers('mydomain.com')
 .then(data=> console.log(data))
 .catch(err=>console.log(err))
  ```
 
- ## Nameservers
- **getNameservers(domain)**
- - description: gets the nameservers for a particular domain
- - params: (domain)
-  - domain: STRING: the root domain of your site i.e. yoursite.com
-- returns: promise(resolve, reject)
-  - resolve: (nameservers)
-    - nameservers: an array of nameserver addresses
-  - reject: (error) 
+## getNameservers(domain)
+- **description**: gets the nameservers for a particular domain
+- **params**: (domain)
+  - **domain**: STRING: REQUIRED: the root domain of your site i.e. yoursite.com
+- **returns**: promise(resolve, reject)
+  - **resolve**: (nameservers)
+    - **nameservers**: an array of nameserver addresses
+  - **reject**: (error)
 
- ## Records
+## updateNameservers(domain, nameservers)
+- **description**: updates the nameservers for a particular domain
+- **params**: (domain)
+  - **domain**: STRING: REQUIRED: the root domain of your site i.e. yoursite.com
+  - **nameservers**: ARRAY: REQUIRED: an array of nameserver strings
+- **returns**: promise(resolve, reject)
+  - **resolve**: ('All Done')
+    - **nameservers**: an array of nameserver addresses
+  - **reject**: (error)
 
- ## Redirects
+## listRecords(domain)
+- **description**: updates the nameservers for a particular domain
 
- ## zones
+## upsertRecords(domain, records)
+- **description**: It will create or update the specified records for a given domain. if onew of the records exists it will updated, otherwise it will be created.
+
+## deleteRecords(doamin, records)
+- **description**: deletes the specified records for a given domain.
+
+## deleteAllRecords(doamin, records)
+- **description**: Deletes all DNS records for a given domain.
+
+## createRedirect(domain, url)
+- **description**: creates a 301 redirect for the given domian to a specified url.
+
+## getZone(domain)
+- **description**: gets the DNS zone Id for a given domain.
