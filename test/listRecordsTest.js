@@ -4,6 +4,6 @@ const listRecords = require('../lib/records/list')
 .then(res => console.log(res))
 .catch(err=> console.log(err))
  */
-listRecords.aws('supereasyforms.com')
-.then(res => console.log(res))
+listRecords.aws('gkpty.com')
+.then(res => {for(let r of res) console.log(JSON.stringify(r))})
 .catch(err=> console.log(err))
