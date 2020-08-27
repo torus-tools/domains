@@ -1,6 +1,7 @@
 const getNameservers = require('./lib/nameservers/get')
 const updateNameservers = require('./lib/nameservers/update')
 const addRecord = require('./lib/records/add')
+const upsertRecords = require('./lib/records/upsert')
 const createRedirect = require('./lib/records/createRedirect')
 //const deleteRecord = require('./lib/records/delete')
 
@@ -24,5 +25,6 @@ module.exports.godaddy = {
   getNameservers: getNameservers.godaddy,
   updateNameservers: updateNameservers.godaddy,
   addRecords: addRecord.godaddy,
+  upsertRecords: upsertRecords.godaddy,
   createRedirect: createRedirect.godaddy
 }
