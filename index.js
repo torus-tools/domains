@@ -5,7 +5,8 @@ const updateNameservers = require('./lib/nameservers/update')
 
 const listRecords = require('./lib/records/list')
 const upsertRecords = require('./lib/records/upsert')
-const deleteRecords = require('./lib/records/delete') 
+const deleteRecords = require('./lib/records/delete')
+const deleteAllRecords = require('./lib/records/deleteAll') 
 const addRecord = require('./lib/records/add')
 
 const createRedirect = require('./lib/redirects/create')
@@ -31,6 +32,7 @@ module.exports.aws = {
   upsertRecords: upsertRecords.aws,
   listRecords: listRecords.aws,
   deleteRecords: deleteRecords.aws,
+  deleteAllRecords: deleteAllRecords.aws,
   addRecords: addRecord.aws,
 
   //createRedirect: createRedirect.aws
@@ -45,6 +47,7 @@ module.exports.godaddy = {
   upsertRecords: upsertRecords.godaddy,
   listRecords: listRecords.godaddy,
   deleteRecords: deleteRecords.godaddy,
+  deleteAllRecords: deleteAllRecords.godaddy,
   addRecords: addRecord.godaddy,
 
   createRedirect: createRedirect.godaddy
