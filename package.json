@@ -1,6 +1,6 @@
 {
   "name": "@torus-tools/domains",
-  "version": "0.0.12",
+  "version": "0.0.14",
   "description": "A standrad promise-based SDK for managing nameserver and DNS operations accorss multiple domain name registrars",
   "main": "index.js",
   "scripts": {
